@@ -1,0 +1,41 @@
+p {
+  --width: 225px;
+  width: var(--width);
+  border: 1px solid;
+  padding: 2px 5px;
+
+  /* Both of the following are required for text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.output-card {
+  display: block;
+
+  &:has(+ .output-card) {
+    margin-bottom: 16px;
+  }
+}
+
+.grid-tile-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.w-full {
+  width: 100%;
+}
